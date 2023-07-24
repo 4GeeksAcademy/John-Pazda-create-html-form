@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build HTML Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <!--header start-->
+        <div class="row">
+            <div class="col d-flex justify-content-start bg-light border py-2">
+                <h2>Payment Form Example</h2>
+            </div>
+        </div>
+        <!--header end-->
+        <form>
+        <!-- row 1 start-->
+        <div class="row my-3">
+            <!-- CC input-->  
+            <div class="col-4 vw-50">
+                <Label for="CC">Card #</label>
+                <input type="text" id="CC" class="form-control" placeholder="xxxxxxxxxxxxxxxx" required/>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+            </div>
+            <!-- CC input end-->
+            <!-- CVC input start-->
+            <div class="col-4">
+                <label for="cvc">CVC #</h6>
+                <input type="text" id="cvc" class="form-control" placeholder="0000"/>
+            </div>
+            <!-- CVC input end-->
+            <!-- Amount input start-->
+            <div class="col-4">
+                <label for="amount">Amount</label>
+                <input type="text" id="amount" class="form-control" placeholder="Amount"/>
+            </div>
+            <!-- Amount input end-->
+        </div>
+        <!-- row 1 end-->
+        <!-- row 2 start-->
+        <div class="row my-3">
+            <!-- first name-->
+            <div class="col-6">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" class="form-control"/>
+            </div>
+            <!-- last name -->
+            <div class="col-6">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" class="form-control"/>
+            </div>
+        </div>
+        <!-- row 2 end-->
+        <!-- row 3-->
+        <div class="row">
+            <!-- City input-->
+            <div class="col-6">
+                <label for="city">City</label>
+                <input type="text" id="city" class="form-control"/>
+            </div>
+            <!-- State input-->
+            <div class="col-3">
+                <label for="state">State</label>
+                <select class="form-select" id="state" aria-label="select-a-state">
+                    <!-- State input options-->
+                    <option value="placeholder" disabled selected>Select a State</option>
+                    <option value="AL">AL</option>
+                    <option value="GA">GA</option>
+                    <option value="FL">FL</option>
+                    <option value="ETC">ETC</option>
+                </select>
+            </div>
+            <!-- postal code input-->
+            <div class="col-3">
+                <label for="postal-code">Postal Code</label>
+                <input type="text" id="postal-code" class="form-control"/>
+            </div>
+        </div>
+        <!-- row 3 end-->
+        <!-- row 4 start-->
+        <div class="row my-3">
+            <!-- WE Take CC Section-->
+            <div class="col-6 d-flex flex-column">
+                <fieldset>
+                    <label for="we-accept">We Accept:</label>
+                    <!-- CC options div-->
+                    <div class="bg-secondary w-50 form-control" id="we-accept">
+                    <input type="radio" name="CC" id="mastercard">
+                    <label for="mastercard"><i class="fa-brands fa-cc-mastercard" style="color: #ffffff;"></i></label>
+                    <input type="radio" name="CC" id="visa">
+                    <label for="visa"><i class="fa-brands fa-cc-visa" style="color: #ffffff;"></i></label>
+                    <input type="radio" name="CC" id="discover">
+                    <label for="discover"><i class="fa-brands fa-cc-discover" style="color: #ffffff;"></i></label>
+                    <input type="radio" name="CC" id="amex">
+                    <label for="amex"><i class="fa-brands fa-cc-amex" style="color: #ffffff;"></i></label>
+                    </div>
+                    <!-- CC options div end-->
+
+                </fieldset>
+            </div>
+            <!--We Take CC Section end -->
+            <!-- Message div-->
+            <div class="col-6">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" class="form-control" rows="5"></textarea>
+                <p>Add any additional notes here</p>
+            </div>
+            <!-- Message div end-->
+        </div>
+        <div class="row bg-light border">
+            <div class="col-12 py-2 d-flex justify-content-end">
+                <input class="btn btn-secondary mx-1" type="submit" value="cancel">
+                <input class="btn btn-primary mx-1" type="submit" value="Send">
+            </div>
+        </div>
+      </form>
+    </div>
+  
+  
+  
+</body>
+</html>
